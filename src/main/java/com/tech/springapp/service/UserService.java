@@ -1,0 +1,14 @@
+package com.tech.springapp.service;
+
+import com.tech.springapp.model.Role;
+import com.tech.springapp.model.User;
+
+import java.util.List;
+
+public interface UserService {
+    User saveUser(User user);
+    Role saveRole(Role role);
+    void addRoleToUser(String username, String roleName);
+    User getUser(String username);
+    List<User> getUsers();
+}
