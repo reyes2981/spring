@@ -2,10 +2,18 @@ package com.tech.springapp.service;
 
 import com.tech.springapp.model.Role;
 import com.tech.springapp.model.User;
+import com.tech.springapp.repository.RoleRepository;
+import com.tech.springapp.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
+@RequiredArgsConstructor
 public class UserServiceImplementation implements UserService {
+    private final UserRepository userRepository;
+    private final RoleRepository roleRepository;
 
     @Override
     public User saveUser(User user) {
