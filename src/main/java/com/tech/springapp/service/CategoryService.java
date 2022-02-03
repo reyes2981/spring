@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -15,10 +14,12 @@ import java.util.stream.StreamSupport;
 public class CategoryService {
 
     private final CategoryRepository categoryRepository;
+    private final ResourceService resourceService;
 
     @Autowired
-    public CategoryService(CategoryRepository categoryRepository) {
+    public CategoryService(CategoryRepository categoryRepository, ResourceService resourceService) {
         this.categoryRepository = categoryRepository;
+        this.resourceService = resourceService;
     }
 
     public Category addCategory(Category category) {

@@ -24,7 +24,7 @@ public class ResourceService {
         return resourceRepository.save(resource);
     }
 
-    public List<Resource> GetCategories() {
+    public List<Resource> GetResources() {
         return StreamSupport
                 .stream(resourceRepository.findAll().spliterator(), false)
                 .collect(Collectors.toList());
