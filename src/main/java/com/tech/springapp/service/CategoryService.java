@@ -1,4 +1,9 @@
 package com.tech.springapp.service;
 
-public class CategoryService {
+import com.tech.springapp.model.Category;
+
+import java.util.List;
+
+public interface CategoryService {
+    List<Category> getAllCategories();
 }
