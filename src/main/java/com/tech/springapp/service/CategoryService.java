@@ -28,4 +28,10 @@ public class CategoryService {
                 .stream(categoryRepository.findAll().spliterator(), false)
                 .collect(Collectors.toList());
     }
+
+    public Category getCategory(Long id) {
+        return categoryRepository.findById(id).orElse(() -> {
+            new RuntimeException())
+        });
+    }
 }
