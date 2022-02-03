@@ -2,6 +2,7 @@ package com.tech.springapp.service;
 
 import com.tech.springapp.excception.CategoryNotFoundException;
 import com.tech.springapp.model.Category;
+import com.tech.springapp.model.Resource;
 import com.tech.springapp.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -49,7 +50,10 @@ public class CategoryService {
         return categoryToEdit;
     }
 
-
+    public Category addResourceToCategory(Long categoryId, Long resourceId) {
+        Category category = getCategory(categoryId);
+        Resource resource = resourceService.getResource(resourceId);
+    }
 
 
 }
