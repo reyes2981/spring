@@ -1,14 +1,18 @@
 package com.tech.springapp.controller;
 
-import lombok.RequiredArgsConstructor;
+import com.tech.springapp.service.CategoryService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = "/api")
-@RequiredArgsConstructor
+@RequestMapping(path = "/categories")
 public class CategoryController {
 
+    private final CategoryService categoryService;
 
-
+    @Autowired
+    public CategoryController(CategoryService categoryService) {
+        this.categoryService = categoryService;
+    }
 }
