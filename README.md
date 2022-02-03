@@ -1,6 +1,6 @@
 ### Option1
 
-- Persist at least **four models** eg: (`Book`, `Author`, `Genre`, `Publisher`) to a PostgreSQL database.
+[X] Persist at least **four models** eg: (`Book`, `Author`, `Genre`, `Publisher`) to a PostgreSQL database.
 - Use Spring Profiles for environment settings.
 - At least one API endpoint must perform full CRUD **create, read, update, and delete actions**.
 - Other API endpoints can perform CRUD based on the business use-case.    
