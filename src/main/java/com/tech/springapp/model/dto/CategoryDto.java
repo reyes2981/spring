@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 
 @Data
 public class CategoryDto {
+
     private Long id;
     private String name;
     private List<ResourceDto> resourcesDto = new ArrayList<>();
