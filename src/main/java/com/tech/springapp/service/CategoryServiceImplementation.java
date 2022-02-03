@@ -22,6 +22,7 @@ public class CategoryServiceImplementation implements CategoryService {
         return categoryRepository.findByName(name);
     }
 
+
     @Override
     public List<Category> getAllCategories() {
         return categoryRepository.findAll();
