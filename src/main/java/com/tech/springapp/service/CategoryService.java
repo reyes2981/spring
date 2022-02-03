@@ -42,5 +42,10 @@ public class CategoryService {
 
     }
 
+    public Category editCategory(Long id, Category category) {
+        Category categoryToEdit = getCategory(id);
+        categoryToEdit.setSerialNumber;
+    }
+
 
 }
