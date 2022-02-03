@@ -11,66 +11,36 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CategoryService {
-    private CategoryRepository categoryRepository;
+public class CategoryServiceImplementation implements CategoryService {
 
-    @Autowired
-    public void setCategoryRepository(CategoryRepository categoryRepository) {
-        this.categoryRepository = categoryRepository;
+
+    @Override
+    public CategoryRepository setCategoryRepository(CategoryRepository categoryRepository) {
+        return null;
     }
 
+    @Override
     public List<Category> getCategories() {
-        System.out.println("service calling getCategories ==>");
-        return categoryRepository.findAll();
+        return null;
     }
 
-    public Optional getCategory(Long categoryId) {
-        System.out.println("service getCategory ==>");
-        Optional category = categoryRepository.findById(categoryId);
-        if (category.isPresent()) {
-            return category;
-        } else {
-            throw new InformationNotFoundException("category with id " + categoryId + " not found");
-        }
+    @Override
+    public Optional<Category> getCategory(Long categoryId) {
+        return Optional.empty();
     }
 
+    @Override
     public Category createCategory(Category categoryObject) {
-        System.out.println("service calling createCategory ==>");
-
-        Category category = categoryRepository.findByName(categoryObject.getName());
-        if (category != null) {
-            throw new InformationExistException("category with name " + category.getName() + " already exists");
-        } else {
-            return categoryRepository.save(categoryObject);
-        }
+        return null;
     }
 
+    @Override
     public Category updateCategory(Long categoryId, Category categoryObject) {
-        System.out.println("service calling updateCategory ==>");
-        Optional<Category> category = categoryRepository.findById(categoryId);
-        if (category.isPresent()) {
-            if (categoryObject.getName().equals(category.get().getName())) {
-                System.out.println("Same");
-                throw new InformationExistException("category " + category.get().getName() + " is already exists");
-            } else {
-                Category updateCategory = categoryRepository.findById(categoryId).get();
-                updateCategory.setName(categoryObject.getName());
-                return categoryRepository.save(updateCategory);
-            }
-        } else {
-            throw new InformationNotFoundException("category with id " + categoryId + " not found");
-        }
+        return null;
     }
 
+    @Override
     public Optional<Category> deleteCategory(Long categoryId) {
-        System.out.println("service calling deleteCategory ==>");
-        Optional<Category> category = categoryRepository.findById(categoryId);
-
-        if (((Optional<?>) category).isPresent()) {
-            categoryRepository.deleteById(categoryId);
-            return category;
-        } else {
-            throw new InformationNotFoundException("category with id " + categoryId + " not found");
-        }
+        return Optional.empty();
     }
 }

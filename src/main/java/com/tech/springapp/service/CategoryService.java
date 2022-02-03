@@ -17,4 +17,5 @@ public interface CategoryService {
     Category updateCategory(Long categoryId, Category categoryObject);
     Optional<Category> deleteCategory(Long categoryId);
 
+
 }
