@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -31,8 +32,8 @@ public class CategoryService {
     }
 
     public Category getCategory(Long id) {
-      return categoryRepository.findById(id).orElseThrow( () ->
-              new CategoryNotFoundException(id));
+        return categoryRepository.findById(id).orElseThrow(() ->
+                new CategoryNotFoundException(id));
     }
 
     public Category deleteCategory(Long id) {
@@ -43,8 +44,12 @@ public class CategoryService {
     }
 
     public Category editCategory(Long id, Category category) {
-        Category categoryToEdit = getCategory(id);
-        categoryToEdit.setSerialNumber;
+        System.out.println("service calling updateCategory ==>");
+        Optional<Category> editCategory = categoryRepository.findById(id);
+        Category updateCategory = categoryRepository.findById(id).get();
+        updateCategory.setName(category.getName());
+        return categoryRepository.save(updateCategory);
+
     }
 
 

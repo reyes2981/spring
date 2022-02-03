@@ -1,8 +1,8 @@
 package com.tech.springapp.model;
 
-import lombok.AllArgsConstructor;
+
+
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
@@ -12,7 +12,6 @@ import javax.persistence.*;
 public class Category {
 
     @Id
-    @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -43,4 +42,7 @@ public class Category {
     public void setName(String name) {
         this.name = name;
     }
+
+
+
 }
