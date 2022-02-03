@@ -19,7 +19,10 @@ public class Category {
 
     @Column
     private String name;
-
+    @OneToMany(
+            cascade = CascadeType.ALL
+    )
+    @JoinColumn(name = "category_id")
     private List<Resource> resources = new ArrayList<>();
 
     public Category(Long id, String name, String description) {
