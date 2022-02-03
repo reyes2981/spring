@@ -1,4 +1,4 @@
 package com.tech.springapp.model;
 
-public class resource {
+public class Resource {
 }
