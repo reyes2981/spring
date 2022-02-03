@@ -1,7 +1,5 @@
 package com.tech.springapp.model;
 
-
-
 import com.tech.springapp.model.dto.CategoryDto;
 import lombok.Data;
 
