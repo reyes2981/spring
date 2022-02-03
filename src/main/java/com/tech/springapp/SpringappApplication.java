@@ -17,21 +17,21 @@ public class SpringappApplication {
         SpringApplication.run(SpringappApplication.class, args);
     }
 
-    @Bean
-    CommandLineRunner run(UserService userService) {
-        return args -> {
-            userService.saveRole(new Role(null, "ROLE_USER"));
-            userService.saveRole(new Role(null, "ROLE_ADMIN"));
-
-            userService.saveUser(new User(null, "optimus prime", "optimusprime456", "1234", new ArrayList<>()));
-            userService.saveUser(new User(null, "ben sisko", "benjaminsisko123", "1234", new ArrayList<>()));
-            userService.saveUser(new User(null, "christian nodal", "christiannodal789", "1234", new ArrayList<>()));
-
-            userService.addRoleToUser("optimusprime456", "ROLE_USER");
-            userService.addRoleToUser("benjaminsisko123", "ROLE_ADMIN");
-            userService.addRoleToUser("christiannodal789", "ROLE_USER");
-        };
-    }
+//    @Bean
+//    CommandLineRunner run(UserService userService) {
+//        return args -> {
+//            userService.saveRole(new Role(null, "ROLE_USER"));
+//            userService.saveRole(new Role(null, "ROLE_ADMIN"));
+//
+//            userService.saveUser(new User(null, "optimus prime", "optimusprime456", "1234", new ArrayList<>()));
+//            userService.saveUser(new User(null, "ben sisko", "benjaminsisko123", "1234", new ArrayList<>()));
+//            userService.saveUser(new User(null, "christian nodal", "christiannodal789", "1234", new ArrayList<>()));
+//
+//            userService.addRoleToUser("optimusprime456", "ROLE_USER");
+//            userService.addRoleToUser("benjaminsisko123", "ROLE_ADMIN");
+//            userService.addRoleToUser("christiannodal789", "ROLE_USER");
+//        };
+//    }
 
 
 }
