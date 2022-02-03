@@ -25,6 +25,5 @@
 
 # The original Plan
 
-![tumblr_o16n2kBlpX1ta3qyvo1_1280](https://user-images.githubusercontent.com/68618256/152445931-46c04af0-e39d-411d-9b43-5c6f4fc51e27.jpg)
+![charlie-day-its-always-sunny-in-philadelphia](https://user-images.githubusercontent.com/68618256/152446514-6928c9d2-8466-4308-9bc1-8420ed06b715.gif)
 
-![spring](https://user-images.githubusercontent.com/68618256/152445967-2f747628-7314-4c19-98af-7cdc94a5f3b8.jpeg)
