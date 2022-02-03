@@ -1,23 +1,24 @@
 package com.tech.springapp.service;
 
-import com.tech.springapp.excception.InformationExistException;
-import com.tech.springapp.excception.InformationNotFoundException;
+
 import com.tech.springapp.model.Category;
 import com.tech.springapp.repository.CategoryRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.hibernate.Session;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
+@Transactional
+@Slf4j
 public class CategoryServiceImplementation implements CategoryService {
 
-
-    @Override
-    public CategoryRepository setCategoryRepository(CategoryRepository categoryRepository) {
-        return null;
-    }
+    private final CategoryRepository categoryRepository;
 
     @Override
     public List<Category> getCategories() {
@@ -42,5 +43,11 @@ public class CategoryServiceImplementation implements CategoryService {
     @Override
     public Optional<Category> deleteCategory(Long categoryId) {
         return Optional.empty();
+    }
+
+    @Override
+    public Category saveCategory(Category category) {
+        log.info("Saving a new user {} to the DB", category.getName());
+        return categoryRepository.save(category);
     }
 }

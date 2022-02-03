@@ -10,12 +10,11 @@ import java.util.Optional;
 
 public interface CategoryService {
 
-    CategoryRepository setCategoryRepository(CategoryRepository categoryRepository);
     List<Category> getCategories();
     Optional<Category> getCategory(Long categoryId);
     Category createCategory(Category categoryObject);
     Category updateCategory(Long categoryId, Category categoryObject);
     Optional<Category> deleteCategory(Long categoryId);
-
+    Category saveCategory(Category category);
 
 }
