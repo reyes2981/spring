@@ -1,6 +1,8 @@
 package com.tech.springapp.service;
 
 
+import com.tech.springapp.excception.InformationExistException;
+import com.tech.springapp.excception.InformationNotFoundException;
 import com.tech.springapp.model.Category;
 import com.tech.springapp.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;
@@ -35,8 +37,11 @@ public class CategoryServiceImplementation implements CategoryService {
     }
 
     @Override
-    public Category updateCategory(Long categoryId, Category categoryObject) {
-        return null;
+    public Category updateCategory(Long categoryId) {
+        System.out.println("service calling updateCategory ==>");
+        Optional<Category> category = categoryRepository.findById(categoryId);
+        Category updateCategory = categoryRepository.findById(categoryId).get();
+        return categoryRepository.save(updateCategory);
     }
 
     @Override
