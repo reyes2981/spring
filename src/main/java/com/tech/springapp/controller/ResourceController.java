@@ -34,4 +34,12 @@ public class ResourceController {
         List<ResourceDto> resourceDto = resources.stream().map(ResourceDto::from).collect(Collectors.toList());
         return new ResponseEntity<>(resourceDto, HttpStatus.OK);
     }
+
+    @GetMapping(value = "{id}")
+    public ResponseEntity<ResourceDto> getResource(@PathVariable final Long id) {
+        Resource resource = resourceService.getResource(id);
+        return new ResponseEntity<>(ResourceDto.from(resource), HttpStatus.OK);
+    }
+
+
 }
