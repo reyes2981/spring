@@ -41,7 +41,12 @@ public class CategoryService {
         Category category = getCategory(id);
         categoryRepository.delete(category);
         return category;
+    }
 
+    public Category editCategory(Long id, Category category) {
+        Category categoryToEdit = getCategory(id);
+        categoryToEdit.setName(category.getName());
+        return categoryToEdit;
     }
 
 
