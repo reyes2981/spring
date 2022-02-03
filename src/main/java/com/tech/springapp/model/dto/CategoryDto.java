@@ -6,18 +6,19 @@ import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Data
 public class CategoryDto {
     private Long id;
     private String name;
-    private List<Resource> resources = new ArrayList<>();
+    private List<ResourceDto> resourcesDto = new ArrayList<>();
 
     public static CategoryDto from(Category category) {
         CategoryDto categoryDto = new CategoryDto();
         categoryDto.setId(categoryDto.getId());
         categoryDto.setName(category.getName());
-        categoryDto.setResources(category.getResources());
+        categoryDto.setResourcesDto(category.getResources().stream().map(ResourceDto::from).collect(Collectors.toList()));
         return categoryDto;
     }
 }
