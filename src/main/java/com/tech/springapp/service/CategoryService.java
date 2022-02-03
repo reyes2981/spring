@@ -53,6 +53,12 @@ public class CategoryService {
     public Category addResourceToCategory(Long categoryId, Long resourceId) {
         Category category = getCategory(categoryId);
         Resource resource = resourceService.getResource(resourceId);
+        category.addResource(resource);
+        return category;
+    }
+
+    public Category removeResourceFromCategory() {
+
     }
 
 
