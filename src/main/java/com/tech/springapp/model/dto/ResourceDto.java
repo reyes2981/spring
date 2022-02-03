@@ -1,7 +1,9 @@
 package com.tech.springapp.model.dto;
 
 import com.tech.springapp.model.Resource;
+import lombok.Data;
 
+@Data
 public class ResourceDto {
     private Long id;
     private String serialNumber;
@@ -12,4 +14,6 @@ public class ResourceDto {
         resourceDto.setSerialNumber(resource.getSerialNumber());
         return resourceDto;
     }
+
+
 }
