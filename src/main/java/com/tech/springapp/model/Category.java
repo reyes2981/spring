@@ -30,10 +30,6 @@ public class Category {
         this.name = name;
     }
 
-    public Category() {
-
-    }
-
     public void addResource(Resource resource) {
         resources.add(resource);
     }

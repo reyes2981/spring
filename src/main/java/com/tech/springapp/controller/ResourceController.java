@@ -1,7 +1,10 @@
 package com.tech.springapp.controller;
 
+import com.tech.springapp.model.Resource;
 import com.tech.springapp.model.dto.ResourceDto;
 import com.tech.springapp.service.ResourceService;
+import org.apache.coyote.Response;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,6 +23,7 @@ public class ResourceController {
     //DTO stands for DATA TRANSFER OBJECT
     @PostMapping
     public ResponseEntity<ResourceDto> addResource(@RequestBody final ResourceDto resourceDto) {
-
+        Resource resource = resourceService.addResource(Resource.from(resourceDto));
+        return new ResponseEntity<>(ResourceDto.from(resource), HttpStatus.OK);
     }
 }

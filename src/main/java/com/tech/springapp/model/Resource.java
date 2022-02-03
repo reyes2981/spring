@@ -16,9 +16,6 @@ public class Resource {
 
     private String serialNumber;
 
-    public Resource() {
-    }
-
     public static Resource from(ResourceDto resourceDto) {
         Resource resource = new Resource();
         resource.setSerialNumber(resourceDto.getSerialNumber());
