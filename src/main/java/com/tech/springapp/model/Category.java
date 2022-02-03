@@ -2,6 +2,7 @@ package com.tech.springapp.model;
 
 
 
+import com.tech.springapp.model.dto.CategoryDto;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -30,6 +31,10 @@ public class Category {
         this.name = name;
     }
 
+    public Category() {
+
+    }
+
     public void addResource(Resource resource) {
         resources.add(resource);
     }
@@ -38,6 +43,11 @@ public class Category {
         resources.remove(resource);
     }
 
+    public static Category from(CategoryDto categoryDto) {
+        Category category = new Category();
+        category.setName(categoryDto.getName());
+        return category;
+    }
 
 
 
