@@ -41,5 +41,11 @@ public class ResourceController {
         return new ResponseEntity<>(ResourceDto.from(resource), HttpStatus.OK);
     }
 
+    @DeleteMapping(value = "{id}")
+    public ResponseEntity<ResourceDto> deleteResource(@PathVariable final Long id) {
+        Resource resource = resourceService.deleteResource(id);
+        return new ResponseEntity<>(ResourceDto.from(resource), HttpStatus.OK);
+    }
+
 
 }
