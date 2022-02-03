@@ -43,14 +43,7 @@ public class CategoryService {
 
     }
 
-    public Category editCategory(Long id, Category category) {
-        System.out.println("service calling updateCategory ==>");
-        Optional<Category> editCategory = categoryRepository.findById(id);
-        Category updateCategory = categoryRepository.findById(id).get();
-        updateCategory.setName(category.getName());
-        return categoryRepository.save(updateCategory);
 
-    }
 
 
 }

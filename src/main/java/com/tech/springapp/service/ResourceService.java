@@ -12,6 +12,7 @@ import java.util.stream.StreamSupport;
 
 @Service
 public class ResourceService {
+
     private final ResourceRepository resourceRepository;
 
     @Autowired
@@ -38,6 +39,11 @@ public class ResourceService {
         Resource resource = getResource(id);
         resourceRepository.delete(resource);
         return resource;
+    }
 
+    public Resource editResource(Long id, Resource resource) {
+        Resource resourceToEdit = getResource(id);
+        resourceToEdit.setSerialNumber(resource.getSerialNumber());
+        return resourceToEdit;
     }
 }
