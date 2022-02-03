@@ -6,6 +6,7 @@ import com.tech.springapp.repository.ResourceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -41,6 +42,7 @@ public class ResourceService {
         return resource;
     }
 
+    @Transactional
     public Resource editResource(Long id, Resource resource) {
         Resource resourceToEdit = getResource(id);
         resourceToEdit.setSerialNumber(resource.getSerialNumber());

@@ -7,6 +7,7 @@ import com.tech.springapp.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -44,12 +45,14 @@ public class CategoryService {
         return category;
     }
 
+    @Transactional
     public Category editCategory(Long id, Category category) {
         Category categoryToEdit = getCategory(id);
         categoryToEdit.setName(category.getName());
         return categoryToEdit;
     }
 
+    @Transactional
     public Category addResourceToCategory(Long categoryId, Long resourceId) {
         Category category = getCategory(categoryId);
         Resource resource = resourceService.getResource(resourceId);
@@ -57,6 +60,7 @@ public class CategoryService {
         return category;
     }
 
+    @Transactional
     public Category removeResourceFromCategory(Long categoryId, Long resourceId) {
         Category category = getCategory(categoryId);
         Resource resource = resourceService.getResource(resourceId);

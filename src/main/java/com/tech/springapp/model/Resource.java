@@ -16,6 +16,9 @@ public class Resource {
 
     private String serialNumber;
 
+    @ManyToOne
+    private Category category;
+
     public static Resource from(ResourceDto resourceDto) {
         Resource resource = new Resource();
         resource.setSerialNumber(resourceDto.getSerialNumber());
