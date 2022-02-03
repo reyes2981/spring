@@ -57,8 +57,11 @@ public class CategoryService {
         return category;
     }
 
-    public Category removeResourceFromCategory() {
-
+    public Category removeResourceFromCategory(Long categoryId, Long resourceId) {
+        Category category = getCategory(categoryId);
+        Resource resource = resourceService.getResource(resourceId);
+        category.removeResource(resource);
+        return category;
     }
 
 
