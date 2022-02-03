@@ -29,7 +29,7 @@ public class ResourceController {
     }
 
     @GetMapping
-    public  ResponseEntity<List<ResourceDto>> getResources() {
+    public ResponseEntity<List<ResourceDto>> getResources() {
         List<Resource> resources = resourceService.getResources();
         List<ResourceDto> resourceDto = resources.stream().map(ResourceDto::from).collect(Collectors.toList());
         return new ResponseEntity<>(resourceDto, HttpStatus.OK);
@@ -47,5 +47,13 @@ public class ResourceController {
         return new ResponseEntity<>(ResourceDto.from(resource), HttpStatus.OK);
     }
 
+    @PutMapping(value = "{id}")
+    public ResponseEntity<ResourceDto> editResource(@PathVariable final Long id,
+                                                    @RequestBody final ResourceDto resourceDto) {
+        Resource editedResource = resourceService.editResource(id, Resource.from(resourceDto));
+        return new ResponseEntity<>(ResourceDto.from(editedResource), HttpStatus.OK);
+
+
+    }
 
 }
