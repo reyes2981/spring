@@ -7,10 +7,10 @@ import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(path = "/categories")
@@ -27,5 +27,12 @@ public class CategoryController {
     public ResponseEntity<CategoryDto> addCategory(@RequestBody final CategoryDto categoryDto) {
         Category category = categoryService.addCategory(Category.from(categoryDto));
         return new ResponseEntity<>(CategoryDto.from(category), HttpStatus.OK);
+    }
+
+    @GetMapping
+    public ResponseEntity<List<CategoryDto>> getCategories() {
+        List<Category> categories = categoryService.getCategories();
+        List<CategoryDto> categoriesDto = categories.stream().map(CategoryDto::from).collect(Collectors.toList());
+        return new ResponseEntity<>(categoriesDto, HttpStatus.OK);
     }
 }
