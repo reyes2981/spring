@@ -35,5 +35,12 @@ public class CategoryService {
               new CategoryNotFoundException(id));
     }
 
+    public Category deleteCategory(Long id) {
+        Category category = getCategory(id);
+        categoryRepository.delete(category);
+        return category;
+
+    }
+
 
 }
