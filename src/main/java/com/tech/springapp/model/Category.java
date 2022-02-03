@@ -1,8 +1,13 @@
 package com.tech.springapp.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
-@Entity
+@Entity // annotation defines that a class can be mapped to a table.
+@Data
 @Table(name = "categories")
 public class Category {
 

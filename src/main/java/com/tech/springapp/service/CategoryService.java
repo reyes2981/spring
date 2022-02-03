@@ -9,5 +9,5 @@ import java.util.List;
 public interface CategoryService {
     Category saveCategory(Category category);
     Category getCategory(String name);
-    List<Category> getAllCategories();
+    List<Category> getCategories();
 }
