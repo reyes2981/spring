@@ -38,6 +38,10 @@ public class Category {
         resources.add(resource);
     }
 
+    public void removeResource(Resource resource) {
+        resources.remove(resource);
+    }
+
 
 
 
