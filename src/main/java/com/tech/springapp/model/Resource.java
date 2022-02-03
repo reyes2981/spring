@@ -1,5 +1,6 @@
 package com.tech.springapp.model;
 
+import com.tech.springapp.model.dto.ResourceDto;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -16,6 +17,11 @@ public class Resource {
     private String serialNumber;
 
     public Resource() {
+    }
 
+    public static Resource from(ResourceDto resourceDto) {
+        Resource resource = new Resource();
+        resource.setSerialNumber(resourceDto.getSerialNumber());
+        return resource;
     }
 }
