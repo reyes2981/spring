@@ -1,7 +1,9 @@
 package com.tech.springapp;
 
+import com.tech.springapp.model.Category;
 import com.tech.springapp.model.Role;
 import com.tech.springapp.model.User;
+import com.tech.springapp.service.CategoryService;
 import com.tech.springapp.service.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -16,6 +18,7 @@ public class SpringappApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringappApplication.class, args);
     }
+
 
 //    @Bean
 //    CommandLineRunner run(UserService userService) {

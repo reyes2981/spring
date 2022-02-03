@@ -10,6 +10,9 @@ public interface CategoryService {
 
     List<Category> getCategories();
     Optional<Category> getCategory(Long categoryId);
+
+    Category createCategory(Category categoryObject);
+
     //Category createCategory(Category categoryObject);
     Category updateCategory(Long categoryId);
     Optional<Category> deleteCategory(Long categoryId);
