@@ -1,5 +1,6 @@
 package com.tech.springapp.controller;
 
+import com.tech.springapp.model.dto.ResourceDto;
 import com.tech.springapp.service.ResourceService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
