@@ -1,8 +1,10 @@
 package com.tech.springapp.excception;
 
-public class CategoryNotFoundException extends RuntimeException{
+import java.text.MessageFormat;
 
-    public  CategoryNotFoundException(Long id) {
+public class CategoryNotFoundException extends RuntimeException {
 
+    public CategoryNotFoundException(Long id) {
+        super(MessageFormat.format("Could not find cart with id: {0}", id));
     }
 }

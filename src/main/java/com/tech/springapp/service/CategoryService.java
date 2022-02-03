@@ -1,5 +1,6 @@
 package com.tech.springapp.service;
 
+import com.tech.springapp.excception.CategoryNotFoundException;
 import com.tech.springapp.model.Category;
 import com.tech.springapp.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,8 +31,9 @@ public class CategoryService {
     }
 
     public Category getCategory(Long id) {
-        return categoryRepository.findById(id).orElse(() -> {
-            new RuntimeException())
-        });
+      return categoryRepository.findById(id).orElseThrow( () ->
+              new CategoryNotFoundException(id));
     }
+
+
 }
