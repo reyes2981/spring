@@ -5,7 +5,6 @@ import com.tech.springapp.model.Category;
 import com.tech.springapp.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.hibernate.Session;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -42,12 +41,12 @@ public class CategoryServiceImplementation implements CategoryService {
 
     @Override
     public Optional<Category> deleteCategory(Long categoryId) {
-        return Optional.empty();
+        return categoryRepository.delete(categoryId);
     }
 
     @Override
     public Category saveCategory(Category category) {
-        log.info("Saving a new user {} to the DB", category.getName());
+        log.info("Saving a new user {} to the DB", category);
         return categoryRepository.save(category);
     }
 }
