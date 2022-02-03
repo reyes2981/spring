@@ -35,4 +35,10 @@ public class CategoryController {
         List<CategoryDto> categoriesDto = categories.stream().map(CategoryDto::from).collect(Collectors.toList());
         return new ResponseEntity<>(categoriesDto, HttpStatus.OK);
     }
+
+    @GetMapping
+    public ResponseEntity<CategoryDto> getCategory(@PathVariable final Long id) {
+        Category category = categoryService.getCategory(id);
+        return new ResponseEntity<>(CategoryDto.from(category), HttpStatus.OK);
+    }
 }
