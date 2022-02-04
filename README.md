@@ -17,6 +17,16 @@
 - [X] Must have `Controller` and  `Service` separate.
 - [X] Document each end-point, such that
 
+This is a backend program that utilizes a RESTful API to handle, receive and request data from a database that stores user information and more. The program is designed for an admin client side and allows for users to be created. The user also has the permission to add, update, delete and create new categogorized resources. 
+
+# The original Plan
+
+![charlie-day-its-always-sunny-in-philadelphia](https://user-images.githubusercontent.com/68618256/152446514-6928c9d2-8466-4308-9bc1-8420ed06b715.gif)
+
+I had big plans when I first started the project, to say the least. I originally was going to create a program that implemeented authorization and authenticataion to my database. My plan was to only make some 
+
+![spring](https://user-images.githubusercontent.com/68618256/152446601-990201a3-7126-4981-b65d-547ce5bbe509.jpeg)
+
 | Request Type | URL| Functionality | 
 |--|--|--|
 | GET | /categories/ | Get all Categories |
@@ -27,15 +37,6 @@
 | PUT | /categories/editCategory | Edit a Category |
 | DELETE | /categories/deleteCategory | Remove a Category |
 
-This is a backend program that utilizes a RESTful API to handle, receive and request data from a database that stores user information and more. The program is designed for an admin client side and allows for users to be created. The user also has the permission to add, update, delete and create new categogorized resources. 
-
-# The original Plan
-
-![charlie-day-its-always-sunny-in-philadelphia](https://user-images.githubusercontent.com/68618256/152446514-6928c9d2-8466-4308-9bc1-8420ed06b715.gif)
-
-I had big plans when I first started the project, to say the least. I originally was going to create a program that implemeented authorization and authenticataion to my database. My plan was to only make some 
-
-![spring](https://user-images.githubusercontent.com/68618256/152446601-990201a3-7126-4981-b65d-547ce5bbe509.jpeg)
 
 # DEPENDENCIES USED
 
