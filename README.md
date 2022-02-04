@@ -15,13 +15,17 @@
 - [X] **Handle exceptions** gracefully.
 - [X] Send appropriate messages back to the client in the event that an exception occurs.
 - [X] Must have `Controller` and  `Service` separate.
-- Document each end-point, such that
+- [X] Document each end-point, such that
 
-| Request Type | URL| Reqtest Body | 
+| Request Type | URL| Functionality | 
 |--|--|--|
-| GET | /api/categories/ | None |
-
-- Stick with the **KISS** (keep it simple, stupid) and **DRY** (don't repeat yourself) principles.
+| GET | /categories/ | Get all Categories |
+| POST | /categories/addCategory | Add a Category |
+| POST | /categories/addResourceToCategory | Add a Resource to a Category |
+| DELETE | /categories//categories/{categoryId}/resources/{resourceId}/remove | Remove a Resource from a Category |
+| GET | /categories/getCategory | Get a Category |
+| PUT | /categories/editCategory | Edit a Category |
+| DELETE | /categories/deleteCategory | Remove a Category |
 
 This is a backend program that utilizes a RESTful API to handle, receive and request data from a database that stores user information and more. The program is designed for an admin client side and allows for users to be created. The user also has the permission to add, update, delete and create new categogorized resources. 
 
