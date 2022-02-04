@@ -15,7 +15,7 @@
 - [X] **Handle exceptions** gracefully.
 - [X] Send appropriate messages back to the client in the event that an exception occurs.
 - [X] Must have `Controller` and  `Service` separate.
-- [X] Document each end-point, such that
+- [X] Document each end-point
 
 This is a backend program that utilizes a RESTful API to handle, receive and request data from a database that stores user information and more. The program is designed for an admin client side and allows for users to be created. The user also has the permission to add, update, delete and create new categogorized resources. 
 
@@ -29,19 +29,22 @@ I had big plans when I first started the project, to say the least. I originally
 
 | Request Type | URL| Functionality | 
 |--|--|--|
-| GET | /categories/ | Get all Categories |
+| GET | /categories/getCategories | Get all Categories |
 | POST | /categories/addCategory | Add a Category |
 | POST | /categories/addResourceToCategory | Add a Resource to a Category |
 | DELETE | /categories//categories/{categoryId}/resources/{resourceId}/remove | Remove a Resource from a Category |
 | GET | /categories/getCategory/id | Get a Category |
 | PUT | /categories/editCategory/id | Edit a Category |
 | DELETE | /categories/deleteCategory/id | Remove a Category |
-
-| GET | /resources/ | Get all Resources |
+| GET | /resources/getResources | Get all Resources |
 | POST | /resources/addResource | Add a Resource |
 | GET | /resources/getResource/id | Get a Resource |
 | PUT | /resources/editResource/id | Edit a Resource |
 | DELETE | /resources/deleteResource/id | Remove a Resource |
+| GET | /users/getUsers | Get all Users |
+| POST | /users/saveUser | Add a User |
+| POST | /users/role/addToUser | Add a Role to User |
+| POST | /users/role/save | Add a Role |
 
 
 # DEPENDENCIES USED
