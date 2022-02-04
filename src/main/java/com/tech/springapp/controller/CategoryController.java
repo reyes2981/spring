@@ -61,7 +61,7 @@ public class CategoryController {
         return new ResponseEntity<>(CategoryDto.from(category), HttpStatus.OK);
     }
 
-    @DeleteMapping(value = "{categoryId}/resources/{resourceId}/delete")
+    @DeleteMapping(value = "{categoryId}/resources/{resourceId}/remove")
     public ResponseEntity<CategoryDto> removeResourceFromCategory(@PathVariable final Long categoryId,
                                                                   @PathVariable final Long resourceId) {
         Category category = categoryService.removeResourceFromCategory(categoryId, resourceId);

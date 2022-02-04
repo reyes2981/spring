@@ -48,14 +48,14 @@ public class SpringappApplication {
 //        };
 //    }
 
-//    @Bean
-//    CommandLineRunner run(ResourceService resourceService) {
-//        return args -> {
-//            resourceService.addResource(new Resource());
-//            resourceService.addResource(new Resource());
-//            resourceService.addResource(new Resource());
-//        };
-//    }
+    @Bean
+    CommandLineRunner run(ResourceService resourceService) {
+        return args -> {
+            resourceService.addResource(new Resource());
+            resourceService.addResource(new Resource());
+            resourceService.addResource(new Resource());
+        };
+    }
 
 
 
