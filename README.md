@@ -46,6 +46,13 @@ I had big plans when I first started the project, to say the least. I originally
 | POST | /users/role/addToUser | Add a Role to User |
 | POST | /users/role/save | Add a Role |
 
+# Project Challenges
+
+1. Adding authentication/authorization - Initially, on of my goals, was was to add these functionalities using JWT tokens. When I would look for a user in the DB I would get an error that stated the object I was trying to view was null. I did research on Google/StackOverFlow and then my classmates on Slack. I was steered in the right direction and attempted to implement UserDetails and UserDetailsService but it was still not working. 
+2.
+3.
+4.
+
 
 # DEPENDENCIES USED
 
