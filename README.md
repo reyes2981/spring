@@ -100,5 +100,12 @@ I had big plans when I first started the project, to say the least. I originally
             <version>3.0.0</version>
         </dependency>
 
+## System Tools Used
 
+|  |  |
+| --- | :--- |
+| Spring Boot | IntelliJ IDEA/Java 11 and 17 |
+| Apache Maven | Google |
+| Swagger UI | Postgres |
+| Lucid App |
 
