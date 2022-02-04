@@ -33,9 +33,15 @@ I had big plans when I first started the project, to say the least. I originally
 | POST | /categories/addCategory | Add a Category |
 | POST | /categories/addResourceToCategory | Add a Resource to a Category |
 | DELETE | /categories//categories/{categoryId}/resources/{resourceId}/remove | Remove a Resource from a Category |
-| GET | /categories/getCategory | Get a Category |
-| PUT | /categories/editCategory | Edit a Category |
-| DELETE | /categories/deleteCategory | Remove a Category |
+| GET | /categories/getCategory/id | Get a Category |
+| PUT | /categories/editCategory/id | Edit a Category |
+| DELETE | /categories/deleteCategory/id | Remove a Category |
+
+| GET | /resources/ | Get all Resources |
+| POST | /resources/addResource | Add a Resource |
+| GET | /resources/getResource/id | Get a Resource |
+| PUT | /resources/editResource/id | Edit a Resource |
+| DELETE | /resources/deleteResource/id | Remove a Resource |
 
 
 # DEPENDENCIES USED
