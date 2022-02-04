@@ -24,7 +24,7 @@ public class Category {
     @JoinColumn(name = "category_id")
     private List<Resource> resources = new ArrayList<>();
 
-    public Category(Long id, String name, String description) {
+    public Category(Long id, String name) {
         this.id = id;
         this.name = name;
     }

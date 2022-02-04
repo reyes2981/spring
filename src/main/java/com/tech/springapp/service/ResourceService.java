@@ -45,7 +45,7 @@ public class ResourceService {
     @Transactional
     public Resource editResource(Long id, Resource resource) {
         Resource resourceToEdit = getResource(id);
-        resourceToEdit.setSerialNumber(resource.getSerialNumber());
+        resourceToEdit.setName(resource.getName());
         return resourceToEdit;
     }
 }

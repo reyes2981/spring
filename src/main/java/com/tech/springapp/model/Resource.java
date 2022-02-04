@@ -7,21 +7,21 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "resouorces")
+@Table(name = "resources")
 public class Resource {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String serialNumber;
+    private String name;
 
     @ManyToOne
     private Category category;
 
     public static Resource from(ResourceDto resourceDto) {
         Resource resource = new Resource();
-        resource.setSerialNumber(resourceDto.getSerialNumber());
+        resource.setName(resourceDto.getName());
         return resource;
     }
 }
