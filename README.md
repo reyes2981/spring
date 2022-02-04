@@ -17,7 +17,7 @@
 - [X] Must have `Controller` and  `Service` separate.
 - [X] Document each end-point
 
-This is a backend program that utilizes a RESTful API to handle, receive and request data from a database that stores user information and more. The program is designed for an admin client side and allows for users to be created. The user also has the permission to add, update, delete and create new categogorized resources. 
+This is a backend program that utilizes a RESTful API to handle, receive and request data from a database that stores user information and more. The program is designed for an admin client side and allows for users to be created. The user also has the permission to add, update, delete and create new categorized resources. 
 
 # The original Plan
 
