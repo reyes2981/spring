@@ -7,7 +7,7 @@
 
 ### Option1
 
-- [X] Persist at least **four models** eg: (`Book`, `Author`, `Genre`, `Publisher`) to a PostgreSQL database.
+- [X] Persist at least **four models** eg: (`User`, `Resource`, `Category`, `Role`) to a PostgreSQL database.
 - [X] Use Spring Profiles for environment settings.
 - [X] At least one API endpoint must perform full CRUD **create, read, update, and delete actions**.
 - [X] Other API endpoints can perform CRUD based on the business use-case.    
@@ -48,11 +48,8 @@ I had big plans when I first started the project, to say the least. I originally
 
 # Project Challenges
 
-1. Adding authentication/authorization - Initially, on of my goals, was was to add these functionalities using JWT tokens. When I would look for a user in the DB I would get an error that stated the object I was trying to view was null. I did research on Google/StackOverFlow and then my classmates on Slack. I was steered in the right direction and attempted to implement UserDetails and UserDetailsService but it was still not working. 
-2.
-3.
-4.
-
+1. Adding authentication/authorization - Initially, one of my goals, was to add these functionalities using JWT tokens. When I would look for a user in the DB I would get an error that stated the object I was trying to view was null. I did research on Google/StackOverFlow and then my classmates on Slack. I was steered in the right direction and attempted to implement UserDetails and UserDetailsService but it was still not working. 
+2. Not a fan of Postman interface - I ended up using Swagger UI
 
 # DEPENDENCIES USED
 
