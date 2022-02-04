@@ -48,8 +48,8 @@ I had big plans when I first started the project, to say the least. I originally
 
 # Project Challenges
 
-1. Adding authentication/authorization - Initially, one of my goals, was to add these functionalities using JWT tokens. When I would look for a user in the DB I would get an error that stated the object I was trying to view was null. I did research on Google/StackOverFlow and then my classmates on Slack. I was steered in the right direction and attempted to implement UserDetails and UserDetailsService but it was still not working. 
-2. Not a fan of Postman interface - I ended up using Swagger UI
+1. Adding authentication/authorization - Initially, one of my goals, was to add these functionalities using JWT tokens. When I would look for a user in the DB I would get an error that stated the object I was trying to view was null. I did research on Google/StackOverFlow and then asked my classmates on Slack. I was steered in the right direction and attempted to implement UserDetails and UserDetailsService but it was still not working. I decided I would not implement JWT tokens and would instead build out the interface for an admin user. 
+3. Not a fan of Postman interface - I ended up using Swagger UI
 
 # DEPENDENCIES USED
 
