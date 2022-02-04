@@ -39,14 +39,14 @@ public class SpringappApplication {
 //        };
 //    }
 //
-    @Bean
-    CommandLineRunner run(CategoryService categoryService) {
-        return args -> {
-            categoryService.addCategory(new Category(1L, "job listings"));
-            categoryService.addCategory(new Category(2L, "events"));
-            categoryService.addCategory(new Category(3L, "blog entries"));
-        };
-    }
+//    @Bean
+//    CommandLineRunner run(CategoryService categoryService) {
+//        return args -> {
+//            categoryService.addCategory(new Category(null, "courses"));
+////            categoryService.addCategory(new Category(null, "events"));
+////            categoryService.addCategory(new Category(null, "blog entries"));
+//        };
+//    }
 
 //    @Bean
 //    CommandLineRunner run(ResourceService resourceService) {

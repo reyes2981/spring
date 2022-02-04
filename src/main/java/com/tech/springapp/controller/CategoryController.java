@@ -3,7 +3,6 @@ package com.tech.springapp.controller;
 import com.tech.springapp.model.Category;
 import com.tech.springapp.model.dto.CategoryDto;
 import com.tech.springapp.service.CategoryService;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
